@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.image-main {
+    max-height: 900px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom:1.5em;
+}
+
+/*=====================
+ Typography
+ ======================*/
+
+ h1,
+ h2,
+ h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #EE9B00;
+    margin-top: 0;
+ }
+ 
+ .bold-text {
+     color: #E9D8A6;
+     font-weight: 700;
+ }
+ h1 {
+     color: #EE9B00;
+     font-size: 2rem;
+     margin: 0;
+ }
+ 
+ strong {
+     font-weight: 700;
+ }
+
+ .red-color {
+     color: #9B2226;
+ }
+
+ /* h1 subtitle*/
+.subtitle {
+font-weight: 700;
+color: #CA6702 ;
+font-size: .75rem;
+
+ }
+
+ .article-title {
+     font-size: 1.5rem;
+ }
+
+ .article-read-more,
+ .article-info {
+     font-size: .875rem;
+ }
+
+ .article-read-more {
+     text-decoration: none;
+     color: #9B2226;
+     font-weight: 700;
+ }
+ 
+ .article-read-more:hover,
+ .article-read-more:focus {
+    text-decoration: underline;
+    color: #E9D8A6;
+ }
+ .p-link{
+     color:#CA6702;
+ }
+
+ .p-link:hover,
+ .p-link:focus {
+     color:#9B2226 ;
+     font-weight: 700;
+ }
+
+ .article-info {
+     margin: 2em 0;
+ }
+
+ .widget-post-title,
+ .widget-title {
+    font-size: 1rem;
+ }
+ 
+ .widget-title {
+     
+     font-family:'Ubuntu',sans-serif;
+     font-weight: 700;
+ }
+
+ .widget-post-title {
+     color: #EE9B00;
+ }
+
+
+
+
+
+ /* ================= 
+ Layout 
+ ====================*/
+
+ .container {
+    width: 90%;
+    /*max-width: 900px;*/
+    margin: 0 auto;
+ }
+
+ .container-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+ .container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+ 
+ header {
+     background: #E9D8A6;
+     padding: 2em 0;
+     text-align: center;
+     margin-bottom: 2.5em;
+     
+ }
+
+footer {
+    background: #9B2226;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+
+
+ @media (min-width:675px) {
+     .container-nav, 
+     .container-main {
+        flex-direction: row;
+     }
+     main {
+        width: 70%;
+     }
+    
+    aside {
+        width: 25%;
+        margin-left: 1.2em;
+        min-width: 200px;
+     }
+ }
+
+
+
+ /*Navigation*/
+
+ nav ul {
+    
+    list-style: none;
+     display: flex;
+     padding: 0;
+     justify-content: center;
+}
+
+nav li {
+    
+    margin-left: 2em;
+    
+}
+
+nav a {
+   text-decoration: none;
+   color: #9B2226;
+   font-weight: 700;
+   padding: .20em 0; 
+}
+
+nav a:hover, 
+nav a:focus{
+    color: white;   
+}
+.current-page {
+    border-bottom: 3px solid #EE9B00;
+}
+.current-page:hover {
+    color: #9B2226;
+}
+@media (max-width:675px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: .5em 0;
+}
+}
+
+
+/* articles */
+
+.main-article {
+    border-bottom: 2px solid #EE9B00;
+    padding-bottom: 1.75em;
+    margin-bottom: 1.75em ;
+}
+
+.recent-article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.recent-main-article {
+order: 2;
+}
+
+.side-article {
+    order: 1;
+}
+
+@media (min-width:675px) {
+    .recent-article {
+        flex-direction:row ;
+        justify-content: space-between;
+    }    
+    .recent-main-article {
+        width: 70%;
+    }
+    .side-article {
+        width: 25%;
+    }
+    .main-article {
+        display: flex;
+        flex-direction: column;
+    }
+    .article-img {
+        order: -2;
+        min-height: 250px;
+        object-fit: cover;
+      
+    }
+    .article-info {
+        order: -1;
+    }
+
+}
+
+/* widgets */
+
+.widget {
+    border: 18px solid #EE9B00;
+    margin-bottom: 1.8em;
+    padding: 1em;
+}
+.widget-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1.5px solid #9B2226;
+    margin-bottom: 1em;
+}
+
+.widget-post:last-child {
+margin: 0;
+border: 0;
+}
+.widget-img {
+    order: -1;
+    margin-bottom: .25em;
+}
